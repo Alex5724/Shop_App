@@ -1,0 +1,40 @@
+header {
+  width: 100%;
+  min-height: 50px;
+  box-shadow: 5px 0 10px rgba(160, 160, 160, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.shopName {
+  font-size: clamp(1rem, 2.5vw, 4rem);
+  font-weight: var(--header-font-weight);
+  color: var(--header-font-color);
+}
+
+.navigation {
+  width: 15%;
+  min-width: 80px;
+}
+
+.navigation ul {
+  font-size: clamp(0.5rem, 1.3vw, 2rem);
+  font-weight: var(--header-font-weight);
+  color: var(--header-font-color);
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--header-font-color);
+}
+
+.link:hover {
+  text-decoration: underline;
+}

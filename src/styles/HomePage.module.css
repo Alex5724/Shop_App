@@ -1,0 +1,33 @@
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: clamp(1.5rem, 3vw, 4rem);
+}
+
+.title {
+  font-size: clamp(1rem, 3.5vw, 5rem);
+  color: var(--header-font-color);
+  font-weight: var(--header-font-weight);
+}
+
+.shopBtn {
+  border: none;
+  border-radius: 50px;
+  background-color: rgb(20, 150, 170);
+  color: white;
+  font-size: clamp(0.5rem, 1.2vw, 3rem);
+  font-weight: var(--main-font-weight);
+  padding: clamp(0.8rem, 1.2vw, 2rem) clamp(2rem, 4.5vw, 5rem);
+
+  &:hover {
+    background-color: rgb(20, 160, 180);
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: rgb(20, 170, 190);
+  }
+}
