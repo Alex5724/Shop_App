@@ -1,12 +1,12 @@
 import '../styles/App.css';
 import Header from './Header';
-import HomePage from './HomePage';
+import { Outlet } from 'react-router';
 
 function App() {
   return (
     <>
       <Header />
-      <HomePage />
+      <Outlet />
     </>
   );
 }

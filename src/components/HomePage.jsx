@@ -1,10 +1,13 @@
 import style from '../styles/HomePage.module.css';
+import { Link } from 'react-router';
 
 function HomePage() {
   return (
-    <main>
+    <main className={style.main}>
       <h2 className={style.title}>Welcome, enjoy your shopping!</h2>
-      <button className={style.shopBtn}>Shop now</button>
+      <Link to="shop">
+        <button className={style.shopBtn}>Shop now</button>
+      </Link>
     </main>
   );
 }
