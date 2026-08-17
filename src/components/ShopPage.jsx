@@ -2,9 +2,11 @@ import style from '../styles/ShopPage.module.css';
 import { useState, useEffect } from 'react';
 import RenderArticle from './RenderArticle';
 import Loading from './LoadingComponent';
+import { useOutletContext } from 'react-router';
 
 function ShopPage() {
   const [products, setProducts] = useState([]);
+  const { addItem, cartItems, removeItem } = useOutletContext();
 
   useEffect(() => {
     const controller = new AbortController();
@@ -39,8 +41,11 @@ function ShopPage() {
       ) : (
         <RenderArticle
           products={products}
+          cartItems={cartItems}
           setProducts={setProducts}
           style={style}
+          addItem={addItem}
+          removeItem={removeItem}
         />
       )}
     </main>

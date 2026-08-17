@@ -1,5 +1,6 @@
 import style from '../styles/Header.module.css';
 import { Link } from 'react-router';
+import ShoppingBag from '../assets/svgs/ShoppingBag.svg';
 
 function Header() {
   return (
@@ -18,8 +19,8 @@ function Header() {
             </Link>
           </li>
           <li>
-            <Link to="cart" className={style.link}>
-              Cart
+            <Link to="bag" className={style.link}>
+              <img src={ShoppingBag} alt="Bag icon" />
             </Link>
           </li>
         </ul>
