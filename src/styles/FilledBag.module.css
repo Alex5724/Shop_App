@@ -4,20 +4,22 @@
   align-items: start;
   justify-content: space-between;
   flex: 1;
-  gap: clamp(1rem, 2.3vw, 3rem);
-  padding: clamp(1rem, 2.3vw, 3rem) clamp(2rem, 4.3vw, 6rem);
+  gap: 2rem;
+  padding: 2rem 4rem;
 }
 
 .article {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: clamp(0.5rem, 1.15vw, 1.5rem) clamp(1rem, 2.3vw, 3rem);
+  padding: 1rem 2rem;
   border: none;
   border-radius: 10px;
   width: 100%;
+  height: 110px;
+  gap: 1rem;
 }
 
 .itemsSection {
@@ -25,8 +27,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: clamp(0.5rem, 1.15vw, 1.5rem);
-  flex: 3.6;
+  gap: 1rem;
+  width: 80%;
   border: none;
 }
 
@@ -35,9 +37,8 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  flex: 1;
-  gap: clamp(0.5rem, 1vw, 1.5rem);
-  padding-left: 0.5rem;
+  gap: 1rem;
+  width: 220px;
 }
 
 .article figure {
@@ -45,19 +46,18 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  gap: clamp(1rem, 2.3vw, 3rem);
-  flex: 3;
+  gap: 1.5rem;
+  width: 80%;
 }
 
 .article figure img {
-  width: clamp(20px, 10%, 80px);
-  height: auto;
-  aspect-ratio: 3 / 4;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
 }
 
 .article figure figcaption {
-  font-size: clamp(0.5rem, 1vw, 1.5rem);
+  font-size: 1rem;
   width: 90%;
   text-align: left;
   font-family: Arial, Helvetica, sans-serif;
@@ -65,29 +65,27 @@
 }
 
 .quantity {
-  width: fit-content;
-  min-width: 70px;
   border: 3px solid rgb(20, 150, 170);
   background-color: white;
-  color: black;
-  padding: clamp(0.3rem, 0.5vw, 1rem) clamp(0.4rem, 0.8vw, 1.1rem);
+  color: rgb(52, 52, 52);
+  height: 35px;
   border-radius: 50px;
-  font-size: clamp(0.5rem, 1vw, 1.5rem);
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 100;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  gap: clamp(0.1rem, 0.7vw, 1rem);
-  background-color: transparent;
+  width: 120px;
 }
 
 .quantity button {
   border: none;
   background-color: inherit;
-  font-weight: bold;
-  font-size: clamp(0.4rem, 1vw, 1.5rem);
-  padding: 0 clamp(0.1rem, 0.5vw, 0.5rem);
+  font-weight: 100;
+  font-size: 1rem;
+  padding: 0 10px;
+  color: rgb(52, 52, 52);
 
   &:hover {
     cursor: pointer;
@@ -96,15 +94,7 @@
 
 .price {
   font-weight: 100;
-  font-size: clamp(0.5rem, 1vw, 1.5rem);
-}
-
-.details {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex: 1;
+  font-size: 1rem;
 }
 
 .summaryWrapper {
@@ -113,8 +103,9 @@
   justify-content: center;
   align-items: center;
   border: none;
-  gap: clamp(0.5rem, 1vw, 1.5rem);
-  flex: 1;
+  gap: 1rem;
+  width: 300px;
+  height: 210px;
 }
 
 .summary {
@@ -125,8 +116,9 @@
   border: none;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: clamp(0.5rem, 1vw, 1.5rem);
+  padding: 8px 16px;
   width: 100%;
+  height: 150px;
 }
 
 .breakdown {
@@ -154,7 +146,7 @@
   flex-direction: row;
   width: inherit;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(0.5rem, 1vw, 1.5rem);
+  font-size: 1rem;
 }
 
 .shippingCost {
@@ -167,7 +159,7 @@
   justify-content: space-between;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(0.5rem, 1.1vw, 1.6rem);
+  font-size: 1.1rem;
 }
 
 .payBtn {
@@ -176,9 +168,9 @@
   background-color: rgb(20, 150, 170);
   color: white;
   width: 100%;
+  height: 35px;
   font-weight: 600;
-  font-size: clamp(0.6rem, 1.1vw, 1.6rem);
-  padding: clamp(0.25rem, 0.5vw, 0.75rem);
+  font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
 
   &:hover {
@@ -191,59 +183,39 @@
   }
 }
 
-@media (max-width: 750px) {
-  .quantity {
-    width: 50%;
-    min-width: 60px;
-    padding: 0.3vw 0.2vw;
-    font-size: 8px;
+@media (max-width: 1200px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
   }
-
   .itemsSection {
-    flex: 2.6;
-  }
-
-  .article figure {
-    flex: 2;
+    width: 100%;
   }
 }
 
-@media (max-width: 560px) {
-  .quantity {
-    width: 60%;
-  }
-
-  .article figure {
-    flex: 2;
-  }
-  .details {
-    flex: 2;
-  }
-}
-
-@media (max-width: 430px) {
-  .quantity {
-    width: 50%;
-    min-width: 50px;
-    font-size: 6px;
-    padding: 1px;
-    background-color: transparent;
-  }
-  .article figure figcaption {
-    font-size: 6px;
-  }
-  .price {
-    font-size: 6px;
-  }
-  .itemCost,
-  .shippingCost,
-  .totalCost {
-    font-size: 6px;
-  }
-}
-
-@media (max-width: 375px) {
+@media (max-width: 850px) {
   .main {
     padding: 1rem;
+  }
+  .article {
+    flex-direction: column;
+    height: auto;
+  }
+  .article figure {
+    flex-direction: column;
+    width: 100%;
+  }
+  .article figure figcaption {
+    text-align: center;
+    width: 100%;
+  }
+  .details {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .summaryWrapper {
+    width: 100%;
   }
 }

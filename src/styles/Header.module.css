@@ -10,18 +10,18 @@ header {
 }
 
 .shopName {
-  font-size: clamp(1rem, 2.5vw, 4rem);
+  font-size: clamp(1.2rem, 2.5vw, 4rem);
   font-weight: var(--header-font-weight);
   color: var(--header-font-color);
+  width: 80%;
 }
 
 .navigation {
-  width: 15%;
-  min-width: 80px;
+  width: 200px;
 }
 
 .navigation ul {
-  font-size: clamp(0.5rem, 1.3vw, 2rem);
+  font-size: clamp(1rem, 1.3vw, 2rem);
   font-weight: var(--header-font-weight);
   color: var(--header-font-color);
   list-style: none;
@@ -38,4 +38,10 @@ header {
 
 .link:hover {
   text-decoration: underline;
+}
+
+@media (min-width: 1600px) {
+  .navigation {
+    width: 300px;
+  }
 }
