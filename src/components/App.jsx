@@ -13,12 +13,16 @@ function App() {
       if (exists) {
         return prev.map((item) =>
           item.id === element.id
-            ? { ...item, quantity: item.quantity + 1 }
+            ? {
+                ...item,
+                quantity: item.quantity + 1,
+                cost: item.price * (item.quantity + 1),
+              }
             : item,
         );
       }
 
-      return [...prev, { ...element, quantity: 1 }];
+      return [...prev, { ...element, quantity: 1, cost: element.price }];
     });
   }
 
@@ -29,7 +33,11 @@ function App() {
       prev
         .map((item) =>
           item.id === element.id
-            ? { ...item, quantity: item.quantity - 1 }
+            ? {
+                ...item,
+                quantity: item.quantity - 1,
+                cost: item.price * (item.quantity - 1),
+              }
             : item,
         )
         .filter((item) => item.quantity > 0),

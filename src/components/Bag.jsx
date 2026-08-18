@@ -3,13 +3,17 @@ import FilledBag from './FilledBag';
 import { useOutletContext } from 'react-router';
 
 function Bag() {
-  const { cartItems, addItem } = useOutletContext();
+  const { cartItems, addItem, removeItem } = useOutletContext();
   return (
     <>
       {cartItems.length === 0 ? (
         <EmptyBag />
       ) : (
-        <FilledBag cartItems={cartItems} addItem={addItem} />
+        <FilledBag
+          cartItems={cartItems}
+          addItem={addItem}
+          removeItem={removeItem}
+        />
       )}
     </>
   );
