@@ -23,7 +23,7 @@
 .shopBtn {
   border: none;
   border-radius: 50px;
-  background-color: rgb(20, 150, 170);
+  background-color: rgb(0, 120, 140);
   color: white;
   font-size: clamp(1rem, 1.5vw, 3rem);
   font-weight: var(--main-font-weight);
@@ -31,11 +31,11 @@
   padding: 0.5rem;
 
   &:hover {
-    background-color: rgb(20, 160, 180);
+    background-color: rgb(0, 130, 150);
     cursor: pointer;
   }
 
   &:active {
-    background-color: rgb(20, 170, 190);
+    background-color: rgb(0, 140, 160);
   }
 }
